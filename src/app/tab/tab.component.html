@@ -1,0 +1,11 @@
+<ngb-tabset>
+  <div *ngFor="let item of items" >
+    <ngb-tab *ngIf="item.checkbox" title={{item.label}}>
+      <ng-template ngbTabContent>
+        <div class="col-sm-12 form-group">
+          <input class="form-control" type="text" [(ngModel)]=item.content>
+        </div>
+      </ng-template>
+    </ngb-tab>
+  </div>
+</ngb-tabset>
